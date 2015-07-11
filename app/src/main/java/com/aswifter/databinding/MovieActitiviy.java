@@ -61,7 +61,7 @@ public class MovieActitiviy extends AppCompatActivity {
 
     private void doSearch(String keyword) {
         binding.progressBar.setVisibility(View.VISIBLE);
-        Movie.searchBooks(keyword, new Movie.IMovieResponse<List<Movie>>() {
+        Movie.searchMovies(keyword, new Movie.IMovieResponse<List<Movie>>() {
             @Override
             public void onData(List<Movie> books) {
                 MyAdapter mAdapter = new MyAdapter(MovieActitiviy.this, books);

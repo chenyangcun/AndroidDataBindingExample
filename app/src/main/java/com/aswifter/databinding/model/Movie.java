@@ -208,7 +208,7 @@ public class Movie extends BaseObservable {
         void onData(T data);
     }
 
-    public static void searchBooks(String name, final IMovieResponse<List<Movie>> response) {
+    public static void searchMovies(String name, final IMovieResponse<List<Movie>> response) {
         RequestParams params = new RequestParams();
         params.put("tag", name);
         params.put("start", 0);
