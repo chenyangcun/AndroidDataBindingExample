@@ -52,11 +52,6 @@ public class Movie extends BaseObservable {
    }
 ```
 
-layout绑定时，实际使用的是get方法，所以我定义了一个getDescription方法，
-在setYear和setOriginal_title方法中通知description更新
-```java
-notifyPropertyChanged(BR.description);
-```
 
 ###Layout
 
@@ -106,7 +101,7 @@ notifyPropertyChanged(BR.description);
    ...
 </layout>
 ```
-在Layout中使用@{movie.rating.average}这样的表达式进行绑定
+
 
 
 ###Binding
@@ -119,6 +114,3 @@ Glide.with(MovieActitiviy.this)
 holder.binding.setVariable(com.aswifter.databinding.BR.movie, movie);
 holder.binding.executePendingBindings();
 ```
-
-在binding类设置变量的值，网络图片在xml里自动显示不了，
-可以通过binding获取ImageView，再调用Glide加载图片。
