@@ -4,7 +4,7 @@
 - 豆瓣电影搜索
   利用Data Binding在RecycleView展示电影列表
 
-  ![data-binding-example](http://image.aswifter.com/data-binding-example.png)
+  ![data-binding-example](/images/data-binding-example.png)
 
 ###Model
 
@@ -99,7 +99,7 @@ notifyPropertyChanged(BR.description);
     </LinearLayout>
 
    ...
-
+</layout>
 ```
 在Layout中使用@{movie.rating.average}这样的表达式进行绑定
 
