@@ -1,10 +1,15 @@
 ##Android Data Binding 代码实战
-本代码用来练习Android Data Binding技术，
-目前实现
-- 豆瓣电影搜索
-  利用Data Binding在RecycleView展示电影列表
 
-  ![data-binding-example](/images/data-binding-example.png)
+本代码用来练习Android Data Binding技术
+
+###目前实现
+
+豆瓣电影搜索
+
+利用Data Binding在RecycleView展示电影列表
+
+![data-binding-example](/images/data-binding-example.png)
+
 
 ###Model
 
