@@ -56,17 +56,16 @@ public class Movie extends BaseObservable {
 
     public void setOriginal_title(String original_title) {
         this.original_title = original_title;
-        notifyPropertyChanged(BR.original_title);
+        notifyPropertyChanged(BR.description);
     }
 
-    @Bindable
     public String getYear() {
         return year;
     }
 
     public void setYear(String year) {
         this.year = year;
-        notifyPropertyChanged(BR.year);
+        notifyPropertyChanged(BR.description);
     }
 
     @Bindable
@@ -78,6 +77,12 @@ public class Movie extends BaseObservable {
         this.images = images;
         notifyPropertyChanged(BR.images);
     }
+
+    @Bindable
+    public String getDescription() {
+        return this.original_title + "\n" + this.getYear();
+    }
+
 
     @Bindable
     public Rating getRating() {
@@ -121,24 +126,24 @@ public class Movie extends BaseObservable {
 
 
     public class Rating {
-        private int max;
-        private int average;
+        private float max;
+        private float average;
         private String stars;
-        private int min;
+        private float min;
 
-        public int getMax() {
+        public float getMax() {
             return max;
         }
 
-        public void setMax(int max) {
+        public void setMax(float max) {
             this.max = max;
         }
 
-        public int getAverage() {
+        public float getAverage() {
             return average;
         }
 
-        public void setAverage(int average) {
+        public void setAverage(float average) {
             this.average = average;
         }
 
@@ -150,11 +155,11 @@ public class Movie extends BaseObservable {
             this.stars = stars;
         }
 
-        public int getMin() {
+        public float getMin() {
             return min;
         }
 
-        public void setMin(int min) {
+        public void setMin(float min) {
             this.min = min;
         }
     }
@@ -205,7 +210,7 @@ public class Movie extends BaseObservable {
 
     public static void searchBooks(String name, final IMovieResponse<List<Movie>> response) {
         RequestParams params = new RequestParams();
-        params.put("q", name);
+        params.put("tag", name);
         params.put("start", 0);
         params.put("end", 50);
         client.get(getAbsoluteUrl("movie/search"), params, new AsyncHttpResponseHandler() {
