@@ -1,8 +1,8 @@
-##Android Data Binding 代码实战
+## Android Data Binding 代码实战
 
 本代码用来练习Android Data Binding技术
 
-###目前实现
+### 目前实现
 
 豆瓣电影搜索
 
@@ -11,7 +11,7 @@
 ![data-binding-example](/images/data-binding-example.png)
 
 
-###Model
+### Model
 
 ```java
 public class Movie extends BaseObservable {
@@ -53,7 +53,7 @@ public class Movie extends BaseObservable {
 ```
 
 
-###Layout
+### Layout
 
 ```xml
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -104,7 +104,7 @@ public class Movie extends BaseObservable {
 
 
 
-###Binding
+### Binding
 ```java
 Movie movie = mMovies.get(position);
 Glide.with(MovieActitiviy.this)
